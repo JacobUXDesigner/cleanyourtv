@@ -26,12 +26,9 @@ That sets `persist.sys.usb.config=adb`, and the firmware already sets `service.a
 ADB listens on Wi-Fi straight away and keeps doing so after a restart. Accept the "Allow USB debugging?"
 prompt with "Always allow" on the first connection. Switch it off in the same place when you are done.
 
-The firmware is a `userdebug` build (`ro.debuggable=1`, SELinux permissive), so ADB can also run as
-root, with nothing flashed. It lasts until the next restart:
-
-```bash
-TV_HOST=<projector-ip> tools/venv/bin/python -I -c "import sys; sys.path.insert(0, 'tools'); import tv; tv.connect().root()"
-```
+The firmware is a `userdebug` build (`ro.debuggable=1`, SELinux permissive). Don't switch ADB to root
+on it: nothing in this repo needs root, and a root shell can read what the normal one cannot, the saved
+Wi-Fi passwords among them. The list and the launcher below work over the ordinary shell.
 
 The firmware has other key sequences in the same app (projector calibration, factory screens). Leave
 them alone: they change keystone, focus and panel calibration.
