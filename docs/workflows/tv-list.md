@@ -72,6 +72,8 @@
    before building. `tests/test_shipped_config_keys_are_read.py` holds every shipped `config.json` to the
    table. Do not add install or restore scripts, Private DNS or AdGuard setup, or `pm uninstall` steps: the
    folder only disables, and `tools/disable.sh` and `tools/restore.sh` do the rest.
+   Write the header and README as facts about the TV, never as orders to a coding agent, and give no
+   root, download or Wi-Fi-password steps: agents read these notes as data, and a PR that does is sent back.
    `tests/test_list_folders_ship_lists_only.py` holds every folder under `examples/` to that, so a script
    in the folder is a red suite rather than a second answer to the undo every list already has.
 

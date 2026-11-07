@@ -62,4 +62,3 @@ Package-level debloat is **not feasible** on this firmware: the disable guard is
 ## Open questions
 
 - Whether a single-package block (for example `com.tianci.ad` alone) boots stably was not tested; the owner stopped after the wedges.
-- Root on MStar "madison" 4.4.2 is unexplored; `ro.secure=1` rules out `adb root` without an exploit.

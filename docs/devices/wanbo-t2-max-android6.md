@@ -36,8 +36,8 @@ Error: java.lang.SecurityException: Neither user 2000 nor current process has an
 ```
 
 The same as on the [Xiaomi Mi TV 4S](xiaomi-mitv4-ansm0.md), the other Android 6 set here. `cmd` does not exist
-yet on Android 6, and `pm query-activities` is unknown. The build is `userdebug` with `ro.debuggable=1`, so
-`adb root` would probably work, but it was not tried: there is little to gain. The projector has 76 packages,
+yet on Android 6, and `pm query-activities` is unknown. The build is `userdebug` with `ro.debuggable=1`; root
+was not used, as nothing in this repo uses it. The projector has 76 packages,
 none of them user-installed, and the heaviest non-system processes are Google Play services (about 44 MB and
 21 MB PSS), the Zeasn launcher (27 MB) and `com.zeasn.services.general` (11 MB).
 
